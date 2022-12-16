@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class Login extends Controller
@@ -17,5 +17,15 @@ class Login extends Controller
             'email' => 'required|email',
             'password' => 'required'
         ]);
+
+        $user = User::where('email', $request->input('email'))->first();
+
+        if(!$user) {
+            return response()->json(['message' => 'Ocorreu um erro, email ou senha inválidos'], 401);
+        }
+
+        if(!password_verify($request->input('password'), $user->password)){
+            return response()->json(['message' => 'Ocorreu um erro, email ou senha inválidos'], 401);
+        }
     }
 }
