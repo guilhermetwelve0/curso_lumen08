@@ -2,6 +2,8 @@
 @section('content')
 <h2>Login</h2>
 
+     <div id="errors"></div>
+
    <form>
       <input type="text" name="email" value="xandercar@hotmail.com">
       <input type="text" name="password" value="123">
