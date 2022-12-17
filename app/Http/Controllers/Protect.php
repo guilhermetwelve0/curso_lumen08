@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class Protect extends Controller
 {
-    protected function index(){
+    public function index(){
         dd('protect');
     }
 }

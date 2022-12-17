@@ -17,6 +17,9 @@ class CheckLoggedIn
     {
         // Pre-Middleware Action
 
+        if(!isset($_SESSION['userId'])){
+            return redirect('/');
+        }
         $response = $next($request);
 
         // Post-Middleware Action
