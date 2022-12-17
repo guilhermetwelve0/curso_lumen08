@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,16 @@
     <link rel="stylesheet" href="./assets/styles.css">
     <title>{{ $title }}</title>
 </head>
-<body>
-  <div class="container">
-     @yield('content')
-  </div>
 
-  @yield ('scripts')
+<body>
+    <div class="container">
+
+        @include('site.partials.header')
+
+        @yield('content')
+    </div>
+
+    @yield ('scripts')
 </body>
+
 </html>

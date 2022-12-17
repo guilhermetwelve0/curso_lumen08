@@ -27,5 +27,8 @@ class Login extends Controller
         if(!password_verify($request->input('password'), $user->password)){
             return response()->json(['message' => 'Ocorreu um erro, email ou senha inválidos'], 401);
         }
+
+        $_SESSION['userId'] = $user->id;
+        return response()->json(['message' => 'Logado com sucesso'], 200);
     }
 }

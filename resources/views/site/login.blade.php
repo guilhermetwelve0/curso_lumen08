@@ -2,17 +2,16 @@
 @section('content')
 <h2>Login</h2>
 
-     <div id="errors"></div>
+<div id="messages"></div>
 
-   <form>
-      <input type="text" name="email" value="xandercar@hotmail.com">
-      <input type="text" name="password" value="123">
-      <button id="btn-login">Login</button>
-   </form>
+<form>
+    <input type="text" name="email" value="torrey86@yahoo.com">
+    <input type="password" name="password" value="123">
+    <button id="btn-login">Login</button>
+</form>
 
-   @section('scripts')
-       <script src="/dist/login.js"></script>
-   @endsection
+@section('scripts')
+<script src="/dist/login.js"></script>
+@endsection
 
 @stop
-

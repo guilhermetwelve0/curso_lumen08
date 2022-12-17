@@ -24,6 +24,7 @@ btnLogin.addEventListener("click", async function (event) {
     } catch (error) {
         const errorsValidate = error.response?.data;
 
+
         if (errorsValidate) {
             for (const index in errorsValidate) {
                 if (errorsValidate.hasOwnProperty(index)) {
